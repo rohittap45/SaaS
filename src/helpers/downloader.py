@@ -3,7 +3,7 @@ from pathlib import Path
 
 def download_to_local(url:str ,out_path:Path , parent_dir:bool=True):
     if not isinstance(out_path, Path):
-        raise ValueError(f"{out_path} must be a valid Path object")
+        raise ValueError(f"{out_path} must be a pathlib.Path object")
     if parent_dir:
         out_path.parent.mkdir(parents=True, exist_ok=True)
 
